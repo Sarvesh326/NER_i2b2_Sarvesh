@@ -43,7 +43,7 @@ To view the notebook please proceed using either of the following methods :
 
 ---
 
-## Dataset Preparation (i2b2)
+## Dataset Preparation (pre-process.ipynb)
 
 1. Used the i2b2 dataset.  
 2. Preprocessing:
@@ -52,7 +52,7 @@ To view the notebook please proceed using either of the following methods :
 
 ---
 
-## Training
+## Training and Evaluation (training.ipynb)
 
 ```python
 from transformers import TrainingArguments, Trainer, DataCollatorForTokenClassification
