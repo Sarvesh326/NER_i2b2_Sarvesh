@@ -23,11 +23,6 @@ pip install -r requirements.txt
 - scikit-learn
 - pandas
 
-Install using:
-```bash
-pip install torch transformers datasets scikit-learn pandas
-```
-
 ---
 
 ## Dataset Preparation (i2b2)
