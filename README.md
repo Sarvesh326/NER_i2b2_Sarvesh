@@ -23,12 +23,15 @@ pip install -r requirements.txt
 ```
 
 ### 2. Requirements
-- Python >= 3.8
-- PyTorch >= 1.10
-- Transformers >= 4.30
-- Datasets >= 2.10
-- scikit-learn
-- pandas
+```txt
+Python >= 3.8
+PyTorch >= 1.10
+Transformers >= 4.30
+Datasets >= 2.10
+scikit-learn
+pandas
+seqeval
+```
 
 ---
 
