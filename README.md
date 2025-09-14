@@ -4,7 +4,14 @@ This project fine-tunes **Bio_ClinicalBERT** (`emilyalsentzer/Bio_ClinicalBERT`)
 Entities extracted include **PROBLEM**, **TREATMENT**, and **TEST**.
 
 ---
+## Justification for Bio_ClinicalBERT
 
+- Pre-trained on **MIMIC-III clinical notes** (real-world hospital data).  
+- Outperforms general BERT in **clinical NLP tasks**.  
+- Handles domain-specific terminology (medications, tests, symptoms).  
+- Widely used in **biomedical research**.
+
+---
 ## Setup Instructions
 
 ### 1. Clone Repository & Install Requirements
@@ -27,10 +34,10 @@ pip install -r requirements.txt
 
 ## Dataset Preparation (i2b2)
 
-1. Obtain the i2b2 dataset (requires license).  
+1. Used the i2b2 dataset.  
 2. Preprocess the dataset:
-   - Replace blank lines with `_custom_note_separator_`.
-   - Split into tokens and labels.  
+   - Replace blank lines with `_custom_note_separator_`. This helps in segregating individual notes.
+   - Split on `_custom_note_separator_` and then further split into tokens and labels.  
 
 ---
 
@@ -40,7 +47,7 @@ pip install -r requirements.txt
 from transformers import TrainingArguments, Trainer, DataCollatorForTokenClassification
 
 training_args = TrainingArguments(
-    output_dir="../results",
+    output_dir="../models",
     eval_strategy="epoch",
     save_strategy="epoch",
     learning_rate=2e-5,
@@ -48,7 +55,6 @@ training_args = TrainingArguments(
     per_device_eval_batch_size=16,
     num_train_epochs=3,
     weight_decay=0.01,
-    logging_dir="../logs",
     logging_steps=50,
 )
 
@@ -111,16 +117,6 @@ Problems: ['chest pain']
 Treatments: ['aspirin']
 Tests: []
 ```
-
----
-
-## Justification for Bio_ClinicalBERT
-
-- Pre-trained on **MIMIC-III clinical notes** (real-world hospital data).  
-- Outperforms general BERT in **clinical NLP tasks**.  
-- Handles domain-specific terminology (medications, tests, symptoms).  
-- Widely used in **biomedical research**.
-
 ---
 
 ## Error Analysis
