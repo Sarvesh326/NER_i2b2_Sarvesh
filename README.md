@@ -32,6 +32,14 @@ scikit-learn
 pandas
 seqeval
 ```
+### 3. Training Notebook Invalid
+
+I have trained the model on a collab notebook since my local only supports CPU memory. For some unknown reason my `training.ipynb` notebook is not getting previewed in Github. 
+
+To view the notebook please proceed using either of the following methods :
+
+- Clone repo as mentioned above (pt1)
+- Refer the collab link : [LINK](https://drive.google.com/file/d/1JBFmyCDMXC-VnR4dkfuVH1hFbe2tmFOm/view?usp=sharing)
 
 ---
 
