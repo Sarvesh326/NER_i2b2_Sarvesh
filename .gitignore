@@ -1,0 +1,7 @@
+# Ignore all checkpoint optimizer/scheduler states
+
+*.pt
+*.pth
+*.ckpt
+scheduler*
+optimizer*
