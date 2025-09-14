@@ -46,7 +46,7 @@ To view the notebook please proceed using either of the following methods :
 ## Dataset Preparation (i2b2)
 
 1. Used the i2b2 dataset.  
-2. Preprocess the dataset:
+2. Preprocessing:
    - Replace blank lines with `_custom_note_separator_`. This helps in segregating individual notes.
    - Split on `_custom_note_separator_` and then further split into tokens and labels.  
 
