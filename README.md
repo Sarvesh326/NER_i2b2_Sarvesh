@@ -9,8 +9,8 @@ Entities extracted include **PROBLEM**, **TREATMENT**, and **TEST**.
 
 ### 1. Clone Repository & Install Requirements
 ```bash
-git clone <your-repo-url>
-cd <your-repo-name>
+git clone https://github.com/Sarvesh326/NER_i2b2_Sarvesh.git
+cd NER_i2b2_Sarvesh
 
 pip install -r requirements.txt
 ```
