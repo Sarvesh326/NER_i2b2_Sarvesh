@@ -5,7 +5,7 @@ Entities extracted include **PROBLEM**, **TREATMENT**, and **TEST**.
 
 ---
 
-## 🚀 Setup Instructions
+## Setup Instructions
 
 ### 1. Clone Repository & Install Requirements
 ```bash
@@ -39,7 +39,7 @@ pip install torch transformers datasets scikit-learn pandas
 
 ---
 
-## 🔧 Training
+## Training
 
 ```python
 from transformers import TrainingArguments, Trainer, DataCollatorForTokenClassification
@@ -72,7 +72,7 @@ trainer.train()
 
 ---
 
-## 📊 Evaluation
+## Evaluation
 
 Evaluate model on validation set:
 ```python
@@ -93,7 +93,7 @@ df_errors.head()
 
 ---
 
-## 🔮 Inference
+## Inference
 
 Load trained model and run inference on **user input**:
 ```python
@@ -119,7 +119,7 @@ Tests: []
 
 ---
 
-## 📈 Justification for Bio_ClinicalBERT
+## Justification for Bio_ClinicalBERT
 
 - Pre-trained on **MIMIC-III clinical notes** (real-world hospital data).  
 - Outperforms general BERT in **clinical NLP tasks**.  
@@ -128,7 +128,7 @@ Tests: []
 
 ---
 
-## 📑 Error Analysis
+## Error Analysis
 
 **Probable Reason of error -**
 
