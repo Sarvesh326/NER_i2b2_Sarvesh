@@ -100,8 +100,8 @@ Load trained model and run inference on **user input**:
 ```python
 from transformers import AutoTokenizer, AutoModelForTokenClassification
 
-loaded_model = AutoModelForTokenClassification.from_pretrained("../results/checkpoint-best")
-loaded_tokenizer = AutoTokenizer.from_pretrained("../results/checkpoint-best")
+loaded_model = AutoModelForTokenClassification.from_pretrained("../models/checkpoint-xxxx")
+loaded_tokenizer = AutoTokenizer.from_pretrained("../models/checkpoint-xxxx")
 
 note = "Patient was prescribed aspirin for chest pain."
 results, entities = predict_entities(note)
@@ -121,14 +121,12 @@ Tests: []
 
 ## Error Analysis
 
-**Probable Reason of error -**
-
 - This i2b2 dataset often labels neurological exams like "diminished light touch" and "pinprick" as tests (they are exam findings).
-
 - But semantically, they also look like problems/symptoms.
+- Due to this model hallucinates sometimes `TEST` as a `PROBLEM`.
 
 **Solution that might help -**
-- Data Augumentation of the error cases and re-training
+- Data Augumentation of the error cases and re-training.
 
 ---
 
